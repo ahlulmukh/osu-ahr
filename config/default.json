@@ -50,26 +50,28 @@
     "afk_check_do_skip": true
   },
   "LobbyKeeper": {
-    "mode": null,
+    "mode": "mania",
     "size": null,
     "password": null,
     "mods": null,
     "hostkick_tolerance": 4,
-    "title": null
+    "title": "2 - 4.5* 4K osu!mania | Auto Host Rotate"
   },
   "LobbyTerminator": {
-    "terminate_time_ms": 60000
+    "terminate_time_ms": 999999
   },
   "MapChecker": {
     "enabled": true,
-    "star_min": 0,
-    "star_max": 0,
+    "star_min": 2,
+    "star_max": 4.5,
     "length_min": 0,
     "length_max": 0,
-    "gamemode": "osu",
+    "gamemode": "mania",
     "num_violations_allowed": 3,
     "allow_convert": true,
-    "map_description": "[https://osu.ppy.sh/b/${map_id} ${title}] | Star Rating: ${star} | Duration: ${length} | Alternative:  [https://beatconnect.io/b/${beatmapset_id} (BeatConnect.io)] | [https://kitsu.moe/d/${beatmapset_id} (Kitsu.moe)]"
+    "map_description": "[https://osu.ppy.sh/b/${map_id} ${title}]",
+    "map_rating": "Star Rating: ${star} | Duration: ${length} | Status : ${status}",
+    "map_download": "Alternative:  [https://beatconnect.io/b/${beatmapset_id} (1)] | [https://kitsu.moe/d/${beatmapset_id} (2)]"
   },
   "MiscLoader": {},
   "MapRecaster": {},
