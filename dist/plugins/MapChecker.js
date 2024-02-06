@@ -340,6 +340,10 @@ class MapValidator {
       );
       rate += 1;
     }
+    if (map.cs !== this.option.keyMania) {
+      violationMsgs.push(`the key is not 4K.`);
+      rate += 1;
+    }
     if (
       this.option.star_min > 0 &&
       map.difficulty_rating < this.option.star_min
@@ -348,7 +352,7 @@ class MapValidator {
         (this.option.star_min - map.difficulty_rating).toFixed(2)
       );
       violationMsgs.push(
-        "the beatmap star rating is lower than the allowed star rating."
+        "the beatmap star rating is lower than the allowed star rating. "
       );
     }
     if (
@@ -359,7 +363,7 @@ class MapValidator {
         (map.difficulty_rating - this.option.star_max).toFixed(2)
       );
       violationMsgs.push(
-        "the beatmap star rating is higher than the allowed star rating."
+        `the beatmap star rating is higher than the allowed star rating.`
       );
     }
     if (
@@ -473,6 +477,7 @@ function validateMapCheckerOption(option) {
   ) {
     option.star_min = 0;
   }
+
   if (
     option.length_max !== undefined &&
     option.length_min !== undefined &&
