@@ -305,7 +305,9 @@ class MapChecker extends LobbyPlugin_1.LobbyPlugin {
       /\$\{length\}/g,
       secToTimeNotation(map.total_length)
     );
-    rating = rating.replace(/\$\{status\}/g, map.status);
+    const capitalizedStatus =
+      map.status.charAt(0).toUpperCase() + map.status.slice(1);
+    rating = rating.replace(/\$\{status\}/g, capitalizedStatus);
     return rating;
   }
   getDownload(map, set) {
