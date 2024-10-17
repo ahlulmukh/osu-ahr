@@ -64,6 +64,7 @@
     "enabled": true,
     "star_min": 2,
     "star_max": 4.5,
+    "keyMania": 4,
     "length_min": 0,
     "length_max": 0,
     "gamemode": "mania",
